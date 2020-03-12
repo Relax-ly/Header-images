@@ -18,7 +18,7 @@ let newListing = (index) => {
     imagesArr.push({url: 'url', description: 'description'})
   }
 
-  new Listing({
+  let newListing = new Listing({
     _id: index,
     images: imagesArr
   })
