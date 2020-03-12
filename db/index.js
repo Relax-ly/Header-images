@@ -3,10 +3,7 @@ mongoose.connect('mongodb://localhost/fetcher');
 
 let listSchema = new mongoose.Schema({
   name: String,
-  images: {
-            type: [picSchema],
-            default: undefined
-          }
+  images: Array
 })
 
 let picSchema = new mongoose.Schema({
