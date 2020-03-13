@@ -10,48 +10,28 @@ let listSchema = new mongoose.Schema({
 
 let Listing = mongoose.model('Listing', listSchema);
 
+let newListing = (index) => {
+  // create array of images
+  let imagesArr = [];
+  let length = Math.floor(Math.random() * (20 - 7) + 7);
+  for (let i = 0; i < length; i++) {
+    imagesArr.push({url: 'url', description: 'description'})
+  }
 
+  let newListing = new Listing({
+    _id: index,
+    images: imagesArr
+  })
 
+  newListing.save((err) => {
+    if (!!err) {
+      console.log(err)
+    }
+  })
+}
 
-
-// let picSchema = new mongoose.Schema({
-//   id: Number,
-//   name: String,
-//   url: String,
-//   description: String
-// })
-
-// let picSchema = mongoose.model('Pic', picSchema);
-
-
-// let ListingEnt = () => {
-//   let listingName = 'some random name';
-//   for (let i = 0; i < 6; i++) {
-//     let newpic = new Pic({
-//       id: i,
-//       name: listingName, // so we can select pictures with this name and put into array
-//       url: 'url',
-//       description: 'brief description'
-//     })
-//     newpic.save((err) => {
-//       if (!!err) {
-//         console.log(err)
-//       }
-//     })
-//   }
-
-//   let imagesArr // do some query to select all images for listingName
-
-//   let newListing = new Listing({
-//   name: listingName,
-//   images: imagesArr
-//   })
-
-//   newListing.save((err) => {
-//     if (!!err) {
-//       console.log(err)
-//     }
-//   })
-// }
+for (let i = 1; i <= 100; i++) {
+  newListing(i);
+}
 
 module.exports = Listing;
