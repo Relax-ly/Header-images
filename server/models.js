@@ -1,8 +1,7 @@
-// const db = require('../db/index.js');
+const db = require('../db')
 
-let get = (name, callback) => {
-  // do query with name
-  callback(null, 'express chain!');
+let get = (id, callback) => {
+  db.Listing.find({_id: 1}).exec((err, listing) => {callback(null, listing)});
 }
 
 module.exports = { get };

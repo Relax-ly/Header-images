@@ -1,8 +1,8 @@
 const models = require('./models.js');
 
 let get = (req, res) => {
-  let index = req.query.index;
-  models.get(index, (err, result) => {
+  let id = req.query.id;
+  models.get(id, (err, result) => {
     if (!!err) {
       console.log(err);
     } else {
