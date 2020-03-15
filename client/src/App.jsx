@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Testing from './testing.jsx';
 class Header extends React.Component {
   constructor(props) {
     super (props);
@@ -10,7 +10,10 @@ class Header extends React.Component {
 
   render () {
     return (
-      <div> React Working!</div>
+      <div>
+        <div> React Working!</div>
+        <Testing />
+      </div>
     )
   }
 }
