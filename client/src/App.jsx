@@ -1,5 +1,5 @@
 import React from 'react';
-import Testing from './testing.jsx';
+
 class Header extends React.Component {
   constructor(props) {
     super (props);
@@ -12,7 +12,7 @@ class Header extends React.Component {
     return (
       <div>
         <div> React Working!</div>
-        <Testing />
+
       </div>
     )
   }
