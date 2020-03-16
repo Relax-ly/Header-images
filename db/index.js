@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fetcher');
+mongoose.connect('mongodb://localhost/fetcher', { useNewUrlParser: true, useUnifiedTopology: true });
 
 let listSchema = new mongoose.Schema({
   _id: Number,
@@ -30,8 +30,11 @@ let newListing = (index) => {
   })
 }
 
-for (let i = 1; i <= 100; i++) {
-  newListing(i);
+// *** refactor so that on componentDidMount call this ***
+const generate100 = () => {
+  for (let i = 1; i <= 100; i++) {
+    newListing(i);
+  }
 }
 
-module.exports = Listing;
+module.exports = { Listing, generate100 };
