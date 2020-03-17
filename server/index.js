@@ -14,8 +14,8 @@ app.get(`/header-img/listing`, (req, res) => {
 
 // on componentDidMount(), populate the database
 app.get(`/header-img/get100`, (req, res) => {
-
   db.generate100();
+  res.send('database was seeded')
 });
 
 app.use('/header-img', express.static(__dirname + '/../client/dist'))
