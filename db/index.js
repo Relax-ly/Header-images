@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const faker = require('faker');
 mongoose.connect('mongodb://localhost/fetcher', { useNewUrlParser: true, useUnifiedTopology: true });
 
 let listSchema = new mongoose.Schema({
@@ -15,7 +16,7 @@ let newListing = (index) => {
   let imagesArr = [];
   let length = Math.floor(Math.random() * (20 - 7) + 7);
   for (let i = 0; i < length; i++) {
-    imagesArr.push({url: 'url', description: 'description'})
+    imagesArr.push({url: 'url', description: faker.lorem.sentence()})
   }
 
   let newListing = new Listing({
