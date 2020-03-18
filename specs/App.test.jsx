@@ -9,9 +9,7 @@ describe('Header component', () => {
     ReactDom.render(<Header />, div);
   });
 
-  it('should contain method getListing', () => {
-    const wrapper = shallow(<Header />);
-    const getListing = wrapper.instance().getListing();
-    expect(getListing).toBe(true);
+  it('when rendered should get a listing', () => {
+
   });
 });

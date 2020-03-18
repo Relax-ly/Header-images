@@ -1,7 +1,5 @@
 const express = require('express');
-// const path = require('path');
 const controller = require('./controller.js');
-// const bodyParser = require('body-parser');
 const db = require('../db');
 
 

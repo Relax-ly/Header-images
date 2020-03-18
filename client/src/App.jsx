@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from 'jquery';
+import axios from 'axios';
 import DefaultGall from './DefaultGall.jsx';
 
 class Header extends React.Component {
@@ -13,32 +13,27 @@ class Header extends React.Component {
 
   componentDidMount() {
     // populates the database
-    $.get({
-      url: '/header-img/get100',
-      success: (succ) => {
-        console.log(succ);
-      },
-      error: (err) => {
+    axios.get('/header-img/get100').then((res) => {
+      console.log(res.data);
+    })
+      .catch((err) => {
         console.log(err);
-      }
-    });
+      });
+
     // default listing is the first one
     this.getListing(1);
   }
 
   // get a listing
   getListing(id) {
-    $.get({
-      url: '/header-img/listing',
-      data: { id },
-      success: (listing) => {
+    axios.get('/header-img/listing', { id })
+      .then((listing) => {
         console.log(listing);
         this.setState({ listing });
-      },
-      error: (err) => {
+      })
+      .catch((err) => {
         console.log(err);
-      }
-    });
+      });
   }
 
   render() {
