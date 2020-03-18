@@ -32,7 +32,7 @@ module.exports = {
     'no-path-concat': 0,
     'prefer-template': 0,
     'no-console': 0,
-    'no-plusplus': 0
-
+    'no-plusplus': 0,
+    'react/destructuring-assignment': 0
   },
 };
