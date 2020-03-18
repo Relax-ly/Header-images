@@ -23,12 +23,12 @@ const images = [
   'https://s3-us-west-1.amazonaws.com/relax-ly.header-images/s7vgb5h2v5i21.png',
   'https://s3-us-west-1.amazonaws.com/relax-ly.header-images/screenshot_18-08-22_19-47-05-000.jpg',
   'https://s3-us-west-1.amazonaws.com/relax-ly.header-images/thiago-klafke-screenshot-16-12-19-13-28-47-000.jpg'
-]
+];
 
 // randomly select an image
 const getRandomImage = () => {
   const index = Math.floor(Math.random() * 22);
   return images[index];
-}
+};
 
 module.exports.getRandomImage = getRandomImage;
