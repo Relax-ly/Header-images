@@ -1,5 +1,6 @@
 const models = require('./models.js');
 
+// get a listed property by _id
 let get = (req, res) => {
   let id = req.query.id;
   models.get(id, (err, result) => {
