@@ -1,20 +1,21 @@
 import React from 'react';
+import DefaultGall from './DefaultGall.jsx';
 
 class Header extends React.Component {
   constructor(props) {
-    super (props);
+    super(props);
     this.state = {
 
-    }
+    };
   }
 
-  render () {
+  render() {
     return (
       <div>
-        <div> React Working!</div>
+        <DefaultGall />
 
       </div>
-    )
+    );
   }
 }
 

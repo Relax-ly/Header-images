@@ -23,5 +23,9 @@ module.exports = {
     'react',
   ],
   rules: {
+    'linebreak-style': 0,
+    'comma-dangle': 0,
+    'import/extensions': 0,
+    'react/jsx-filename-extension': 0
   },
 };
