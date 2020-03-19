@@ -35,7 +35,7 @@ const createListing = (index) => {
   // save the new listing to the database
   newListing.save((err) => {
     if (err) {
-      console.log(err);
+      // console.log(err);
     }
   });
 };

@@ -9,8 +9,15 @@ class DefaultGall extends React.Component {
   }
 
   render() {
+    // console.log(this.props.listing);
     return (
-      <div> Hello from Default Gallery</div>
+      <div>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+        <img/>
+      </div>
     );
   }
 }

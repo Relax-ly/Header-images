@@ -26,9 +26,11 @@ class Header extends React.Component {
 
   // get a listing
   getListing(id) {
-    axios.get('/header-img/listing', { id })
+    axios.get('/header-img/listing', { params: {
+      _id: id
+    } })
       .then((listing) => {
-        console.log(listing);
+        console.log(listing.data);
         this.setState({ listing });
       })
       .catch((err) => {
