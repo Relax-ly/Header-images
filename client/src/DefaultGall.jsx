@@ -9,14 +9,14 @@ class DefaultGall extends React.Component {
   }
 
   render() {
-    // console.log(this.props.listing);
+    console.log(this.props.listing);
     return (
       <div>
-        <img/>
-        <img/>
-        <img/>
-        <img/>
-        <img/>
+        <img src={this.props.listing.images[0].url} alt="first img" />
+        <img src={this.props.listing.images[1].url} alt="second img" />
+        <img src={this.props.listing.images[2].url} alt="third img" />
+        <img src={this.props.listing.images[3].url} alt="fourt img" />
+        <img src={this.props.listing.images[4].url} alt="fifth img" />
       </div>
     );
   }

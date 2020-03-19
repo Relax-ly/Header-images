@@ -42,10 +42,9 @@ const createListing = (index) => {
 
 
 // seed the database by generates 100 listings
-const generate100 = () => {
-  for (let i = 1; i <= 100; i++) {
-    createListing(i);
-  }
-};
+for (let i = 1; i <= 100; i++) {
+  createListing(i);
+}
 
-module.exports = { Listing, generate100 };
+
+module.exports = { Listing };

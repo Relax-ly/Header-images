@@ -33,6 +33,7 @@ module.exports = {
     'prefer-template': 0,
     'no-console': 0,
     'no-plusplus': 0,
-    'react/destructuring-assignment': 0
+    'react/destructuring-assignment': 0,
+    'react/prop-types': 0
   },
 };
