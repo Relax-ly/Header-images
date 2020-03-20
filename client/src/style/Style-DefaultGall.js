@@ -18,20 +18,20 @@ export const Wrapper = styled.div`
                        "first fourth fifth";
   #first {
     grid-area: first;
-    border-radius: 40px 0px 0px 40px;
+    border-radius: 20px 0px 0px 20px;
   }
   #second {
     grid-area: second;
   }
   #third {
     grid-area: third;
-    border-radius: 0px 40px 0px 0px;
+    border-radius: 0px 20px 0px 0px;
   }
   #fourth {
     grid-area: fourth;
   }
   #fifth {
     grid-area: fifth;
-    border-radius: 0px 0px 40px 0px;
+    border-radius: 0px 0px 20px 0px;
   }
 `;

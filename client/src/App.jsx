@@ -42,7 +42,7 @@ class Header extends React.Component {
 
   componentDidMount() {
     // default listing
-    this.getListing(1);
+    this.getListing(67);
   }
 
   // get a listing
