@@ -1,24 +1,16 @@
 import React from 'react';
-import { Wrapper, CloseButton } from './style/Style-Modal';
+
 
 class Modal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: true
     };
-    this.closeModal = this.closeModal.bind(this);
-  }
-
-  closeModal() {
-    this.setState({ display: false });
   }
 
   render() {
     return (
-      <Wrapper>
-        <CloseButton onClick={this.closeModal} display={this.state.display}>&times;</CloseButton>
-      </Wrapper>
+      <img src='http://s3.amazonaws.com/snd-store/a/26553114/02_02_18_508408464_aab_560x292.jpg'></img>
     );
   }
 }

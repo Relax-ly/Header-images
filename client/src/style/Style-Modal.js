@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  display: ${(props) => props.children.props.display ? "inline" : "none"};
+export const WrapperModal = styled.div`
+  display: ${(props) => props.children[0].props.display ? "inline" : "none"};
   position: fixed;
   z-index: 1;
   left: 0;
@@ -9,14 +9,17 @@ export const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   background-color: white;
+  padding: 30px 30px;
 `;
 
 export const CloseButton = styled.button`
-  float: right;
+  border-radius: 5px;
+  float: left;
   font-size: 30px;
-  color: #ccc;
+  color: #000;
+  background-color: #D3D3D3;
   :hover {
-    color: #000;
+    background-color: #C0C0C0;
     text-decoration: none;
     cursor: pointer;
   }

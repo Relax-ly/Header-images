@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import DefaultGall from './DefaultGall.jsx';
-import Modal from './Modal.jsx';
 
 class Header extends React.Component {
   constructor(props) {
@@ -36,9 +35,10 @@ class Header extends React.Component {
             description: 'description'
           }
         ]
-      }
+      },
     };
     this.getListing = this.getListing.bind(this);
+    this.modalDisplay = this.modalDisplay.bind(this);
   }
 
   componentDidMount() {
@@ -61,11 +61,14 @@ class Header extends React.Component {
       });
   }
 
+  modalDisplay(event) {
+    console.log('clicked ' + event.target.id)
+  }
+
   render() {
     return (
       <div>
-        <DefaultGall listing={this.state.listing} />
-        <Modal />
+        <DefaultGall listing={this.state.listing} modalDisplay={this.modalDisplay} />
       </div>
     );
   }
