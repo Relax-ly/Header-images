@@ -13,6 +13,7 @@ export const WrapperModal = styled.div`
 `;
 
 export const CloseButton = styled.button`
+  grid-area: close;
   border-radius: 5px;
   float: left;
   font-size: 30px;
