@@ -47,6 +47,7 @@ export const Next = styled.button`
 `;
 
 export const Prev = styled.button`
+  display: ${(state) => { if (state.state === 0) { return 'none'; } }};
   grid-area: prev;
   font-family:sans-serif;
   font-size: 200%;
