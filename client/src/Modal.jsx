@@ -11,13 +11,14 @@ class Modal extends React.Component {
   }
 
   render() {
+    console.log(this.props.listing);
     return (
       <Wrapper>
         <Page id="page"> 1/ 25 </Page>
         <Prev id="prev"> ‹ </Prev>
-        <Image id="image" src="https://clips-media-assets2.twitch.tv/24603802752-offset-10087.718000000003-18-preview-480x272.jpg" />
+        <Image id="image" src={this.props.listing.images[0].url} />
         <Next id="next"> › </Next>
-        <Description id="description">Description</Description>
+        <Description id="description">{this.props.listing.images[0].description}</Description>
       </Wrapper>
     );
   }
