@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import DefaultGall from './DefaultGall.jsx';
+import Modal from './Modal.jsx';
 
 class Header extends React.Component {
   constructor(props) {
@@ -64,7 +65,7 @@ class Header extends React.Component {
     return (
       <div>
         <DefaultGall listing={this.state.listing} />
-
+        <Modal />
       </div>
     );
   }
