@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: 50px auto 50px;
   grid-template-rows: 100px auto 100px;
@@ -8,36 +9,23 @@ export const Wrapper = styled.div`
   grid-template-areas: "1 page 3"
                        "prev image next"
                        "7 desc 9";
-  #image {
-
-  }
-  #description {
-
-  }
-  #page {
-
-  }
-  #next {
-
-  }
-  #prev {
-
-  }
-
+  align-items: center;
+  justify-items: center;
+  padding: 0px 60px 0px 0px;
 `;
 
-export const Image = styled.img`  grid-area: image;
-  margin-left: auto;
-  margin-right: auto;
+export const Image = styled.img`
+  grid-area: image;
 `;
 
-export const Description = styled.div`  grid-area: desc;
-  margin-left: auto;
-  margin-right: auto;
+export const Description = styled.div`
+  grid-area: desc;
+  text-align: center;
 `;
 
 export const Page = styled.div`
   grid-area: page;
+  text-align: center;
   height: 50px;
   width: 50px;
 `;
@@ -51,6 +39,11 @@ export const Next = styled.button`
   border-radius: 100%;
   height: 50px;
   width: 50px;
+  :hover {
+    background-color: #DCDCDC;
+    text-decoration: none;
+    cursor: pointer;
+  }
 `;
 
 export const Prev = styled.button`
@@ -62,4 +55,9 @@ export const Prev = styled.button`
   border-radius: 100%;
   height: 50px;
   width: 50px;
+  :hover {
+    background-color: #DCDCDC;
+    text-decoration: none;
+    cursor: pointer;
+  }
 `;
