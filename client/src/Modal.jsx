@@ -10,7 +10,7 @@ class Modal extends React.Component {
 
   render() {
     return (
-      <img src='http://s3.amazonaws.com/snd-store/a/26553114/02_02_18_508408464_aab_560x292.jpg'></img>
+      <img src='https://clips-media-assets2.twitch.tv/24603802752-offset-10087.718000000003-18-preview-480x272.jpg'></img>
     );
   }
 }
