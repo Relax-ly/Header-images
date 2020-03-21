@@ -6,12 +6,27 @@ export const Wrapper = styled.div`
   grid-template-columns: 50px auto 50px;
   grid-template-rows: 100px auto 100px;
   grid-gap: 0;
-  grid-template-areas: "1 page 3"
+  grid-template-areas: "1 page ls"
                        "prev image next"
                        "7 desc 9";
   align-items: center;
   justify-items: center;
   padding: 0px 60px 0px 0px;
+`;
+
+export const Like_Share = styled.div`
+  grid-area: ls;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "share like";
+`;
+
+export const Like = styled.button`
+  grid-area: like;
+`;
+
+export const Share = styled.button`
+  grid-area: share;
 `;
 
 export const Image = styled.img`
