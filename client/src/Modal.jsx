@@ -15,23 +15,28 @@ class Modal extends React.Component {
 
   toPrev() {
     let previous = this.state.current;
-    previous --;
+    previous--;
     this.setState({ current: previous });
   }
 
   toNext() {
     let next = this.state.current;
-    next ++;
+    next++;
     this.setState({ current: next });
   }
 
   render() {
+    const imgArrayLength = this.props.listing.images.length;
     return (
       <Wrapper>
-        <Page id="page"> {this.state.current + 1}/{this.props.listing.images.length - 1} </Page>
+        <Page id="page">
+          {this.state.current + 1}
+          /
+          {this.props.listing.images.length}
+        </Page>
         <Prev id="prev" onClick={this.toPrev} state={this.state.current}> ‹ </Prev>
         <Image id="image" src={this.props.listing.images[this.state.current].url} />
-        <Next id="next" onClick={this.toNext}> › </Next>
+        <Next id="next" onClick={this.toNext} state={this.state.current} max={imgArrayLength}> › </Next>
         <Description id="description">{this.props.listing.images[this.state.current].description}</Description>
       </Wrapper>
     );

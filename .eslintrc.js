@@ -34,6 +34,7 @@ module.exports = {
     'no-console': 0,
     'no-plusplus': 0,
     'react/destructuring-assignment': 0,
-    'react/prop-types': 0
+    'react/prop-types': 0,
+    'react/no-access-state-in-setstate': 0
   },
 };

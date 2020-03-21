@@ -18,12 +18,17 @@ export const CloseButton = styled.button`
   grid-area: close;
   border-radius: 5px;
   float: left;
-  font-size: 30px;
+  font-family: sans-serif;
+  font-size: 15px;
+  padding: 7px 13px 7px 13px;
   color: #000;
   background-color: #DCDCDC;
   :hover {
     background-color: #C0C0C0;
     text-decoration: none;
     cursor: pointer;
+  }
+  :focus {
+    outline:none;
   }
 `;
