@@ -9,18 +9,26 @@ export const WrapperModal = styled.div`
   height: 100%;
   width: 100%;
   background-color: white;
-  padding: 30px 30px;
+  padding: 30px 30px 30px 30px;
 `;
 
 export const CloseButton = styled.button`
+  position: absolute;
+  z-index: 1;
+  grid-area: close;
   border-radius: 5px;
   float: left;
-  font-size: 30px;
+  font-family: sans-serif;
+  font-size: 15px;
+  padding: 7px 13px 7px 13px;
   color: #000;
-  background-color: #D3D3D3;
+  background-color: #DCDCDC;
   :hover {
     background-color: #C0C0C0;
     text-decoration: none;
     cursor: pointer;
+  }
+  :focus {
+    outline:none;
   }
 `;

@@ -36,7 +36,7 @@ class DefaultGall extends React.Component {
           <CloseButton onClick={this.closeModal} display={this.state.displayModal}>
             &times; Close
           </CloseButton>
-          <Modal />
+          <Modal listing={this.props.listing} />
         </WrapperModal>
       </div>
     );
