@@ -25,7 +25,7 @@ export const LikeShare = styled.div`
   margin-top: 25px;
 `;
 
-export const ShareModal = styled.div`
+export const ShareModalContainer = styled.div`
   display: ${(display) => display.display};
   position: fixed;
   margin-left: center;
@@ -136,6 +136,7 @@ export const Prev = styled.button`
   border-radius: 100%;
   height: 50px;
   width: 50px;
+  margin-left: 90px;
   :hover {
     background-color: #DCDCDC;
     text-decoration: none;

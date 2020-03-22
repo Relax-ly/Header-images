@@ -1,6 +1,8 @@
 import React from 'react';
+import ShareModalContent from './ShareModalContent.jsx'
 import {
-  Wrapper, LikeShare, CloseShareModal, ShareModal, Like, Share, Image, Description, Page, Next, Prev,
+  Wrapper, LikeShare, CloseShareModal, ShareModalContainer,
+  Like, Share, Image, Description, Page, Next, Prev,
 } from './style/Style-Modal-Contents';
 
 class Modal extends React.Component {
@@ -40,9 +42,9 @@ class Modal extends React.Component {
     const imgArrayLength = this.props.listing.images.length;
     return (
       <Wrapper>
-        <ShareModal onClick={this.clickToClose} display={this.state.displayModal}>
+        <ShareModalContainer onClick={this.clickToClose} display={this.state.displayModal}>
           <CloseShareModal>&times; Close</CloseShareModal>
-        </ShareModal>
+        </ShareModalContainer>
         <LikeShare>
           <Share onClick={this.clickToShow}>&#xf045;</Share>
           <Like>❤</Like>
