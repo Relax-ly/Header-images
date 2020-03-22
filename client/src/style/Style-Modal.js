@@ -9,7 +9,6 @@ export const WrapperModal = styled.div`
   height: 100%;
   width: 100%;
   background-color: white;
-  padding: 30px 30px 30px 30px;
 `;
 
 export const CloseButton = styled.button`
@@ -23,6 +22,7 @@ export const CloseButton = styled.button`
   padding: 7px 13px 7px 13px;
   color: #000;
   background-color: #DCDCDC;
+  margin: 30px;
   :hover {
     background-color: #C0C0C0;
     text-decoration: none;
