@@ -33,8 +33,15 @@ export const ShareModalContainer = styled.div`
   z-index: 1;
   height: 100%;
   width: 100%;
-  background-color: #282828;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+`;
+
+export const ShareModal = styled.div`
+  background-color: white;
+  margin: 5% auto;
+  width: 400px;
+  padding: 25px;
 `;
 
 export const CloseShareModal = styled.button`

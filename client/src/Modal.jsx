@@ -2,7 +2,7 @@ import React from 'react';
 import ShareModalContent from './ShareModalContent.jsx'
 import {
   Wrapper, LikeShare, CloseShareModal, ShareModalContainer,
-  Like, Share, Image, Description, Page, Next, Prev,
+  ShareModal, Like, Share, Image, Description, Page, Next, Prev,
 } from './style/Style-Modal-Contents';
 
 class Modal extends React.Component {
@@ -16,6 +16,7 @@ class Modal extends React.Component {
     this.toNext = this.toNext.bind(this);
     this.clickToClose = this.clickToClose.bind(this);
     this.clickToShow = this.clickToShow.bind(this);
+    this.clickOutside = this.clickOutside.bind(this);
   }
 
   toPrev() {
@@ -35,15 +36,25 @@ class Modal extends React.Component {
   }
 
   clickToShow() {
-    this.setState({ displayModal: 'inline' });
+    this.setState({ displayModal: 'block' });
+  }
+
+  clickOutside(event) {
+    const outsideModal = document.getElementById('outsideModal');
+    if (event.target === outsideModal) {
+      this.clickToClose();
+    }
   }
 
   render() {
     const imgArrayLength = this.props.listing.images.length;
     return (
       <Wrapper>
-        <ShareModalContainer onClick={this.clickToClose} display={this.state.displayModal}>
-          <CloseShareModal>&times; Close</CloseShareModal>
+        <ShareModalContainer id="outsideModal" display={this.state.displayModal} onClick={this.clickOutside}>
+          <ShareModal>
+            <CloseShareModal onClick={this.clickToClose}>&times; Close</CloseShareModal>
+            <ShareModalContent />
+          </ShareModal>
         </ShareModalContainer>
         <LikeShare>
           <Share onClick={this.clickToShow}>&#xf045;</Share>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Wrapper } from './style/Style-Share-Modal-Content';
 
 class ShareModalContent extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class ShareModalContent extends React.Component {
 
   render() {
     return (
-      <div>modalContent</div>
+      <Wrapper>modalContent</Wrapper>
     );
   }
 }
