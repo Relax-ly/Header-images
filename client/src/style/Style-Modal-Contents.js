@@ -6,12 +6,90 @@ export const Wrapper = styled.div`
   grid-template-columns: 50px auto 50px;
   grid-template-rows: 100px auto 100px;
   grid-gap: 0;
-  grid-template-areas: "1 page 3"
+  grid-template-areas: "1 page ls"
                        "prev image next"
                        "7 desc 9";
   align-items: center;
   justify-items: center;
   padding: 0px 60px 0px 0px;
+`;
+
+export const LikeShare = styled.div`
+  grid-area: ls;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "share like";
+  top: 0;
+  right: 10px;
+  position: absolute;
+  margin-top: 25px;
+`;
+
+export const ShareModalContainer = styled.div`
+  display: ${(display) => display.display};
+  position: fixed;
+  margin-left: center;
+  margin-right: center;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+`;
+
+export const ShareModal = styled.div`
+  background-color: white;
+  margin: 5% auto;
+  width: 400px;
+  padding: 25px;
+`;
+
+export const CloseShareModal = styled.button`
+
+`;
+
+export const Like = styled.button`
+  grid-area: like;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  margin: 5px;
+  border: none;
+  font-size: 20px;
+  font-family: Helvetica;
+  :hover {
+    background-color: #DCDCDC;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  :focus {
+    outline:none;
+  }
+`;
+
+export const Share = styled.button`
+  grid-area: share;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  margin: 5px;
+  border: none;
+  font-size: 20px;
+  font-family: Helvetica;
+  :hover {
+    background-color: #DCDCDC;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  :focus {
+    outline:none;
+  }
 `;
 
 export const Image = styled.img`
@@ -29,6 +107,7 @@ export const Description = styled.div`
 export const Page = styled.div`
   grid-area: page;
   text-align: center;
+  margin-top: 25px;
   font-family: math;
   height: 50px;
   width: 50px;
@@ -64,6 +143,7 @@ export const Prev = styled.button`
   border-radius: 100%;
   height: 50px;
   width: 50px;
+  margin-left: 90px;
   :hover {
     background-color: #DCDCDC;
     text-decoration: none;
