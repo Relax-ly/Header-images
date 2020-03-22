@@ -52,7 +52,7 @@ class Modal extends React.Component {
       <Wrapper>
         <ShareModalContainer id="outsideModal" display={this.state.displayModal} onClick={this.clickOutside}>
           <ShareModal>
-            <CloseShareModal onClick={this.clickToClose}>&times; Close</CloseShareModal>
+            <CloseShareModal onClick={this.clickToClose}>&times;</CloseShareModal>
             <ShareModalContent />
           </ShareModal>
         </ShareModalContainer>

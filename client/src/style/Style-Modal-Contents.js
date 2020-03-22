@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  font-family: Circular, -apple-system, system-ui, Roboto, sans-serif;
   position: relative;
   display: grid;
   grid-template-columns: 50px auto 50px;
@@ -45,7 +46,19 @@ export const ShareModal = styled.div`
 `;
 
 export const CloseShareModal = styled.button`
-
+  z-index: 1;
+  border: none;
+  float: left;
+  font-family: sans-serif;
+  font-size: 30px;
+  margin: 15px;
+  :hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  :focus {
+    outline:none;
+  }
 `;
 
 export const Like = styled.button`
@@ -101,14 +114,12 @@ export const Image = styled.img`
 export const Description = styled.div`
   grid-area: desc;
   text-align: center;
-  font-family: math;
 `;
 
 export const Page = styled.div`
   grid-area: page;
   text-align: center;
   margin-top: 25px;
-  font-family: math;
   height: 50px;
   width: 50px;
 `;
