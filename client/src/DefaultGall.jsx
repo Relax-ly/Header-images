@@ -7,19 +7,32 @@ class DefaultGall extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayModal: false
+      displayModal: 'none',
+      startImg: 0
     };
     this.handleclick = this.handleclick.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
   handleclick(event) {
-    console.log(`clicked ${event.target.id} image`);
-    this.setState({ displayModal: true });
+    // convert class to a index value so we can determine
+    // what image will be display in modal.
+    const number = {
+      first: 0,
+      second: 1,
+      third: 2,
+      fourth: 3,
+      fifth: 4
+    };
+
+    let index = number[event.target.id];
+    this.setState({ startImg: index });
+    this.setState({ displayModal: 'inline' });
   }
 
+  // this function closes the modal
   closeModal() {
-    this.setState({ displayModal: false });
+    this.setState({ displayModal: 'none' });
   }
 
   render() {
@@ -36,7 +49,7 @@ class DefaultGall extends React.Component {
           <CloseButton onClick={this.closeModal} display={this.state.displayModal}>
             &times; Close
           </CloseButton>
-          <Modal listing={this.props.listing} />
+          <Modal listing={this.props.listing} index={this.state.startImg} />
         </WrapperModal>
       </div>
     );

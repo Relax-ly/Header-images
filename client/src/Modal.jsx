@@ -8,8 +8,9 @@ import {
 class Modal extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props.index);
     this.state = {
-      current: 0,
+      current: this.props.index,
       displayModal: 'none'
     };
     this.toPrev = this.toPrev.bind(this);
@@ -19,26 +20,31 @@ class Modal extends React.Component {
     this.clickOutside = this.clickOutside.bind(this);
   }
 
+  // previous button will decrement the current imge shown.
   toPrev() {
     let previous = this.state.current;
     previous--;
     this.setState({ current: previous });
   }
 
+  // previous button will increment the current imge shown.
   toNext() {
     let next = this.state.current;
     next++;
     this.setState({ current: next });
   }
 
+  // close share modal.
   clickToClose() {
     this.setState({ displayModal: 'none' });
   }
 
+  // show modal.
   clickToShow() {
     this.setState({ displayModal: 'block' });
   }
 
+  // on click outside of sharemodal, it will hide the modal.
   clickOutside(event) {
     const outsideModal = document.getElementById('outsideModal');
     if (event.target === outsideModal) {
