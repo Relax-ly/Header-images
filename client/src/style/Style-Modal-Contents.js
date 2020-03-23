@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+// container that organizes the carousel page.
 export const Wrapper = styled.div`
   font-family: Circular, -apple-system, system-ui, Roboto, sans-serif;
   position: relative;
@@ -15,6 +16,7 @@ export const Wrapper = styled.div`
   padding: 0px 60px 0px 0px;
 `;
 
+// container to organize the like and share button.
 export const LikeShare = styled.div`
   grid-area: ls;
   display:grid;
@@ -26,6 +28,7 @@ export const LikeShare = styled.div`
   margin-top: 25px;
 `;
 
+// the backgrond for share modal.
 export const ShareModalContainer = styled.div`
   display: ${(display) => display.display};
   position: fixed;
@@ -45,6 +48,7 @@ export const ShareModal = styled.div`
   padding: 25px;
 `;
 
+// button to close share modal.
 export const CloseShareModal = styled.button`
   z-index: 1;
   border: none;
@@ -105,17 +109,20 @@ export const Share = styled.button`
   }
 `;
 
+// current image being displayed on carousel.
 export const Image = styled.img`
   grid-area: image;
   min-height: 500px;
   max-height: 500px;
 `;
 
+// description to current image being displayed on carousel.
 export const Description = styled.div`
   grid-area: desc;
   text-align: center;
 `;
 
+// current index of image / total images.
 export const Page = styled.div`
   grid-area: page;
   text-align: center;
@@ -124,6 +131,7 @@ export const Page = styled.div`
   width: 50px;
 `;
 
+// button to update the current image to the next image.
 export const Next = styled.button`
   display: ${(state) => { if (state.state + 1 >= state.max) { return 'none'; } }};
   grid-area: next;
@@ -144,6 +152,7 @@ export const Next = styled.button`
   }
 `;
 
+// button to update the current image to the previous image.
 export const Prev = styled.button`
   display: ${(state) => { if (state.state === 0) { return 'none'; } }};
   grid-area: prev;

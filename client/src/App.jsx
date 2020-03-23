@@ -38,7 +38,6 @@ class Header extends React.Component {
       },
     };
     this.getListing = this.getListing.bind(this);
-    this.modalDisplay = this.modalDisplay.bind(this);
   }
 
   componentDidMount() {
@@ -61,14 +60,10 @@ class Header extends React.Component {
       });
   }
 
-  modalDisplay(event) {
-    console.log('clicked ' + event.target.id)
-  }
-
   render() {
     return (
       <div>
-        <DefaultGall listing={this.state.listing} modalDisplay={this.modalDisplay} />
+        <DefaultGall listing={this.state.listing} />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+// the first 5 images display on the default gallery.
 export const Image = styled.img`
  max-width: 100%;
  min-height: 100%;
@@ -17,6 +18,7 @@ export const Image = styled.img`
  }
 `;
 
+// the wrapper that organizes the gallery.
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 50% 25% 25%;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
+// wrapper for the main carousel.
 export const WrapperModal = styled.div`
-  display: ${(props) => props.children[0].props.display ? "inline" : "none"};
+  display: ${(props) => props.children[0].props.display};
   position: fixed;
   z-index: 1;
   left: 0;
@@ -11,6 +12,7 @@ export const WrapperModal = styled.div`
   background-color: white;
 `;
 
+// button that closes the main carousel.
 export const CloseButton = styled.button`
   position: absolute;
   z-index: 1;
