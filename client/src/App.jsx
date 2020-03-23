@@ -8,33 +8,13 @@ class Header extends React.Component {
     this.state = {
       listing: {
         _id: 'number',
-        images: [
-          {
-            _id: 1,
+        images: [1, 2, 3, 4, 5].map((i) => {
+          return {
+            _id: i,
             url: 'loadingIMG.gif',
             description: 'description'
-          },
-          {
-            _id: 2,
-            url: 'loadingIMG.gif',
-            description: 'description'
-          },
-          {
-            _id: 3,
-            url: 'loadingIMG.gif',
-            description: 'description'
-          },
-          {
-            _id: 4,
-            url: 'loadingIMG.gif',
-            description: 'description'
-          },
-          {
-            _id: 5,
-            url: 'loadingIMG.gif',
-            description: 'description'
-          }
-        ]
+          };
+        })
       },
     };
     this.getListing = this.getListing.bind(this);
