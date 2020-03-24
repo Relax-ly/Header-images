@@ -8,7 +8,6 @@ import {
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.index);
     this.state = {
       current: this.props.index,
       displayModal: 'none'
