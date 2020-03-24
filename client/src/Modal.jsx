@@ -1,5 +1,5 @@
 import React from 'react';
-import ShareModalContent from './ShareModalContent.jsx'
+import ShareModalContent from './ShareModalContent.jsx';
 import {
   Wrapper, LikeShare, CloseShareModal, ShareModalContainer,
   ShareModal, Like, Share, Image, Description, Page, Next, Prev,

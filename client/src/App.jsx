@@ -22,12 +22,12 @@ class Header extends React.Component {
 
   componentDidMount() {
     // default listing
-    this.getListing(67);
+    this.getListing(1);
   }
 
   // get a listing
   getListing(id) {
-    axios.get('/header-img/listing', {
+    axios.get('http://localhost:2555/api/header-img/listing', {
       params: {
         _id: id
       }
