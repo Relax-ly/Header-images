@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+This component displays header images.
 
 ## Related Projects
 
@@ -29,19 +29,25 @@ start nodemon
 npm run start
 ```
 
+start webpack
+
+```sh
+npm run build
+```
+
 to seed the data base
 
 ```sh
 npm run seed
 ```
-run http://localhost:2555/header-img/ in browser
+open http://localhost:2555/header-img/ in browser
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
-- etc
+- MongoDB
 
 ## Development
 
