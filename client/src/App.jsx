@@ -11,7 +11,7 @@ class Header extends React.Component {
         images: [1, 2, 3, 4, 5].map((i) => {
           return {
             _id: i,
-            url: 'loadingIMG.gif',
+            url: 'http://localhost:2555/api/header-img/loadingIMG.gif',
             description: 'description'
           };
         })

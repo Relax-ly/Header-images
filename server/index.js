@@ -1,13 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const controller = require('./controller.js');
-
 
 const app = express();
 const port = 2555;
 
 
 // request for a listing
-app.get('/api/header-img/listing', (req, res) => {
+app.get('/api/header-img/listing', cors(), (req, res) => {
   controller.get(req, res);
 });
 
