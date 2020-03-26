@@ -26,7 +26,7 @@ class Header extends React.Component {
     const length = splitUrl.length;
     const index = splitUrl[length - 2];
     console.log(index);
-    this.getListing(1);
+    this.getListing(index);
   }
 
   // get a listing
