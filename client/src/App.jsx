@@ -24,7 +24,6 @@ class Header extends React.Component {
     // getting index from url
     const splitUrl = window.location.href.split('/');
     const index = splitUrl[3];
-    console.log(splitUrl);
     this.getListing(index);
   }
 
