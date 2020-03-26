@@ -11,7 +11,7 @@ class Header extends React.Component {
         images: [1, 2, 3, 4, 5].map((i) => {
           return {
             _id: i,
-            url: 'http://localhost:2555/headerimg/loadingIMG.gif',
+            url: 'http://localhost:2555/loadingIMG.gif',
             description: 'description'
           };
         })
@@ -24,12 +24,13 @@ class Header extends React.Component {
     // getting index from url
     const splitUrl = window.location.href.split('/');
     const index = splitUrl[3];
+    console.log(splitUrl);
     this.getListing(index);
   }
 
   // get a listing
   getListing(id) {
-    axios.get('http://localhost:2555/headerimg/listing', {
+    axios.get('http://localhost:2555/listing', {
       params: {
         _id: id
       }
