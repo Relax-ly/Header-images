@@ -40,7 +40,7 @@ to seed the data base
 ```sh
 npm run seed
 ```
-open http://localhost:2555/header-img/ in browser
+App is served at http://localhost:2555/headerimg/
 
 ## Requirements
 
