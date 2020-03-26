@@ -11,7 +11,7 @@ class Header extends React.Component {
         images: [1, 2, 3, 4, 5].map((i) => {
           return {
             _id: i,
-            url: 'http://localhost:2555/api/header-img/loadingIMG.gif',
+            url: 'http://localhost:2555/bug/loadingIMG.gif',
             description: 'description'
           };
         })
@@ -21,13 +21,17 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    // default listing
+    // getting index from url
+    const splitUrl = window.location.href.split('/');
+    const length = splitUrl.length;
+    const index = splitUrl[length - 2];
+    console.log(index);
     this.getListing(1);
   }
 
   // get a listing
   getListing(id) {
-    axios.get('http://localhost:2555/api/header-img/listing', {
+    axios.get('http://localhost:2555/bug/listing', {
       params: {
         _id: id
       }

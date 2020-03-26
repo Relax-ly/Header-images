@@ -7,7 +7,7 @@ const port = 2555;
 
 
 // request for a listing
-app.get('/api/header-img/listing', (req, res) => {
+app.get('/bug/listing', (req, res) => {
   controller.get(req, res);
 });
 
@@ -16,7 +16,6 @@ app.get('/api/header-img/listing', (req, res) => {
 //   controller.get(req, res);
 // });
 
-
-app.use('/api/header-img', express.static(__dirname + '/../client/dist'));
+app.use('/bug', express.static(__dirname + '/../client/dist'));
 
 app.listen(port, () => console.log(`Listening to port ${port}!`));
