@@ -17,6 +17,23 @@ This component displays header images.
 
 ## Usage
 
+This component displays images from the property listing and is ment to be paired with other components from Relaxly project.
+
+## Requirements
+
+An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
+
+- Node 6.13.0
+- MongoDB
+
+## Development
+
+Mongo DB is require.
+
+### Installing Dependencies
+
+From within the root directory:
+
 in root directory install dependency
 
 ```sh
@@ -40,22 +57,5 @@ to seed the data base
 ```sh
 npm run seed
 ```
-App is served at http://localhost:2555/headerimg/
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- MongoDB
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install
-```
+App is served at http://localhost:2555/
 
