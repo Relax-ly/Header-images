@@ -3,7 +3,7 @@ const faker = require('faker');
 const img = require('./images.js');
 
 
-mongoose.connect('mongodb://localhost/relaxlyheaderimg', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://database/relaxlyheaderimg', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // schema for a property listing
 const listSchema = new mongoose.Schema({
