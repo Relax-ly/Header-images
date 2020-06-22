@@ -30,11 +30,15 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 Mongo DB is require.
 
+A docker image is also avalible:
+
+```sh
+docker pull pteerawatt/header-images_header:header3
+```
+
 ### Installing Dependencies
 
 From within the root directory:
-
-in root directory install dependency
 
 ```sh
 npm install
